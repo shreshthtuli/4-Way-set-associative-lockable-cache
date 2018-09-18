@@ -24,7 +24,8 @@ entity Cache is
     write_data : IN std_logic_vector(31 downto 0):= "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ";
     hit : OUT std_logic := '0';
     rw : IN std_logic := '0'; -- '0' means read, '1' means write
-    lock : IN std_logic_vector(3 downto 0)
+    lock : IN std_logic_vector(3 downto 0);
+    delay : INOUT std_logic := '0'
      );
 end Cache;
 
@@ -38,7 +39,6 @@ signal mem_rw : std_logic := '0';
 signal enable : std_logic := '0';
 signal mem_read_data : std_logic_vector(31 downto 0) := X"00000000";
 signal mem_write_data : std_logic_vector(31 downto 0) := X"00000000";
-signal delay : std_logic := '0';
 
 signal set_num : integer;
 signal tag : std_logic_vector(2 downto 0);

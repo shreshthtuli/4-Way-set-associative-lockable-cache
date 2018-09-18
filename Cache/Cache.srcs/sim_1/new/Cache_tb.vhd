@@ -28,12 +28,13 @@ signal write_data : std_logic_vector(31 downto 0);
 signal hit : std_logic := '0';
 signal rw : std_logic := '0'; -- '0' means read, '1' means write
 signal lock : std_logic_vector(3 downto 0) := "0000";
+signal stall : std_logic;
 CONSTANT clk_period : TIME := 2us;
 begin
 
 Cache:
 ENTITY work.Cache
-port map(clk, address, read_data, write_data, hit, rw, lock);
+port map(clk, address, read_data, write_data, hit, rw, lock, stall);
 
 
 -- Generate clock
@@ -119,6 +120,13 @@ BEGIN
     -- read address 8 with locked - should be miss, cache does not change
     rw <= '0';
     address <= "01000";
+    lock <= "0001";
+    
+    wait for 2*clk_period;
+   
+     -- read address 9 without locked - should be miss, cache changes
+    rw <= '0';
+    address <= "01001";
     lock <= "0001";
     
     wait for 2*clk_period;
