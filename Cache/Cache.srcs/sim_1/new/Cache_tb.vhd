@@ -39,8 +39,106 @@ port map(clk, address, data, hit, rw,lock);
 -- Generate clock
 clk <= not clk after 1us;
 
-
-
+PROCESS
+BEGIN
+    
+    -- write 1 to address 0
+    rw <= '1';
+    address <= "00000";
+    data <= X"00000001";
+    lock <= "0000";
+        
+    wait for clk_period;
+    
+    -- write 2 to address 1
+    rw <= '1';
+    address <= "00001";
+    data(1 downto 0) <= "10";
+    lock <= "0000";
+    
+    wait for clk_period;    
+    
+    -- write 3 to adress 4
+    rw <= '1';
+    address <= "00100";
+    data(1 downto 0) <= "11";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- write 4 to address 5
+    rw <= '1';    
+    address <= "00101";    
+    data(2 downto 0) <= "100";    
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 0 to cache set 0 - should be miss
+    rw <= '0';
+    address <= "00000";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 1 to cache set 1 - should be miss
+    rw <= '0';
+    address <= "00001";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 4 to cache set 0 - should be miss
+    rw <= '0';
+    address <= "00100";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 5 to cache set 1 - should be miss
+    rw <= '0';
+    address <= "00101";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 0 - should be hit
+    rw <= '0';
+    address <= "00000";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 4 - should be hit
+    rw <= '0';
+    address <= "00100";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 8 with locked - should be miss, cache does not change
+    rw <= '0';
+    address <= "01000";
+    lock <= "0001";
+    
+    wait for clk_period;
+    
+    -- read address 0 - should be hit (as cache did not change)
+    rw <= '0';
+    address <= "00000";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    -- read address 4 - should be hit (as cache did not change)
+    rw <= '0';
+    address <= "00100";
+    lock <= "0000";
+    
+    wait for clk_period;
+    
+    
+END PROCESS;
 
 end Behavioral;
 
