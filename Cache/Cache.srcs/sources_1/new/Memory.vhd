@@ -69,15 +69,5 @@ begin
 
 read_data <= memory_array(to_integer(unsigned(address))) when rw = '0';
 memory_array(to_integer(unsigned(address))) <= write_data when rw = '1' and enable = '1';
---PROCESS(clk)
---BEGIN
---    if(clk = '1' and clk'event) then
---        if(rw = '0') then
---            data <= memory_array(to_integer(unsigned(address)));
---        elsif(rw = '1' and enable = '1') then
---            memory_array(to_integer(unsigned(address))) <= data;
---        end if;
---    end if;
---END PROCESS;
 
 end Behavioral;

@@ -23,7 +23,8 @@ end Cache_tb;
 architecture Behavioral of Cache_tb is
 signal clk : std_logic := '0';
 signal address : std_logic_vector(4 downto 0) := "00000";
-signal data : std_logic_vector(31 downto 0);
+signal read_data : std_logic_vector(31 downto 0);
+signal write_data : std_logic_vector(31 downto 0);
 signal hit : std_logic := '0';
 signal rw : std_logic := '0'; -- '0' means read, '1' means write
 signal lock : std_logic_vector(3 downto 0) := "0000";
@@ -32,8 +33,7 @@ begin
 
 Cache:
 ENTITY work.Cache
-port map(clk, address, data, hit, rw,lock);
-
+port map(clk, address, read_data, write_data, hit, rw, lock);
 
 
 -- Generate clock
@@ -45,7 +45,7 @@ BEGIN
     -- write 1 to address 0
     rw <= '1';
     address <= "00000";
-    data <= X"00000001";
+    write_data <= X"00000001";
     lock <= "0000";
         
     wait for clk_period;
@@ -53,7 +53,7 @@ BEGIN
     -- write 2 to address 1
     rw <= '1';
     address <= "00001";
-    data(1 downto 0) <= "10";
+    write_data <= X"00000002";
     lock <= "0000";
     
     wait for clk_period;    
@@ -61,7 +61,7 @@ BEGIN
     -- write 3 to adress 4
     rw <= '1';
     address <= "00100";
-    data(1 downto 0) <= "11";
+    write_data <= X"00000003";
     lock <= "0000";
     
     wait for clk_period;
@@ -69,7 +69,7 @@ BEGIN
     -- write 4 to address 5
     rw <= '1';    
     address <= "00101";    
-    data(2 downto 0) <= "100";    
+    write_data <= X"00000004";   
     lock <= "0000";
     
     wait for clk_period;
@@ -79,28 +79,28 @@ BEGIN
     address <= "00000";
     lock <= "0000";
     
-    wait for clk_period;
+    wait for 2*clk_period;
     
     -- read address 1 to cache set 1 - should be miss
     rw <= '0';
     address <= "00001";
     lock <= "0000";
     
-    wait for clk_period;
+    wait for 2*clk_period;
     
     -- read address 4 to cache set 0 - should be miss
     rw <= '0';
     address <= "00100";
     lock <= "0000";
     
-    wait for clk_period;
+    wait for 2*clk_period;
     
     -- read address 5 to cache set 1 - should be miss
     rw <= '0';
     address <= "00101";
     lock <= "0000";
     
-    wait for clk_period;
+    wait for 2*clk_period;
     
     -- read address 0 - should be hit
     rw <= '0';
@@ -121,7 +121,7 @@ BEGIN
     address <= "01000";
     lock <= "0001";
     
-    wait for clk_period;
+    wait for 2*clk_period;
     
     -- read address 0 - should be hit (as cache did not change)
     rw <= '0';
