@@ -1,0 +1,244 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 2952
+License: Customer
+
+Current time: 	Mon Oct 08 14:14:30 IST 2018
+Time zone: 	India Standard Time (Asia/Calcutta)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 48 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	C:/Xilinx/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	Shreshth Tuli
+User home directory: C:/Users/Shreshth Tuli
+User working directory: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2017.4
+RDI_DATADIR: C:/Xilinx/Vivado/2017.4/data
+RDI_BINDIR: C:/Xilinx/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/Shreshth Tuli/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/Shreshth Tuli/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/Shreshth Tuli/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/vivado.log
+Vivado journal file location: 	C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/vivado.jou
+Engine tmp dir: 	C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/.Xil/Vivado-2952-DESKTOP-0I0PA3Q
+
+GUI allocated memory:	169 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 522 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// [GUI Memory]: 59 MB (+59449kb) [00:00:15]
+// [Engine Memory]: 478 MB (+349760kb) [00:00:15]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Shreshth Tuli\Google Drive\Third Year\First Sem\COL719\COL719_Assignments\A2\4-Way-set-associative-lockable-cache\Cache\Cache.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 541 MB. GUI used memory: 34 MB. Current time: 10/8/18 2:14:32 PM IST
+// [Engine Memory]: 541 MB (+40849kb) [00:00:20]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 569 MB (+749kb) [00:00:22]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'. 
+// Project name: Cache; location: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 766.359 ; gain = 76.238 
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 63 MB (+1269kb) [00:01:45]
+// [GUI Memory]: 67 MB (+141kb) [00:08:31]
+// PAPropertyPanels.initPanels (Cache.vhd) elapsed time: 0.2s
+// Elapsed time: 636 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// [GUI Memory]: 70 MB (+246kb) [00:11:12]
+// [GUI Memory]: 77 MB (+3112kb) [00:12:41]
+// Elapsed time: 91 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd), Memory : Memory(Behavioral) (Memory.vhd)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd), Memory : Memory(Behavioral) (Memory.vhd)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd), Memory : Memory(Behavioral) (Memory.vhd)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd), Memory : Memory(Behavioral) (Memory.vhd)]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Cache(Behavioral) (Cache.vhd)]", 1, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 39 MB. Current time: 10/8/18 2:27:12 PM IST
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Memory.vhd", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Cache.vhd", 1); // k (j, cj)
+// Elapsed time: 70 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Memory.vhd", 2); // k (j, cj)
+// Elapsed time: 116 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Cache.vhd", 1); // k (j, cj)
+// Elapsed time: 69 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cj) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (O, cj) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cj):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'Cache_tb' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvhdl --incr --relax -prj Cache_tb_vhdl.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Vivado Simulator 2017.4 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto a1e346d3155049818977cd7442155ee7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Cache_tb_behav xil_defaultlib.Cache_tb -log elaborate.log  Using 2 slave threads. Starting static elaboration Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "Cache_tb_behav -key {Behavioral:sim_1:Functional:Cache_tb} -tclbatch {Cache_tb.tcl} -view {{C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache_tb_behav.wcfg}} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2017.4 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// Tcl Message: open_wave_config {C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache_tb_behav.wcfg} 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 47 MB. Current time: 10/8/18 2:31:45 PM IST
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source Cache_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'Cache_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 813.281 ; gain = 2.918 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e (cj)
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN, "simulation_live_run_for_time"); // B (f, cj)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_LIVE_RUN
+// [GUI Memory]: 85 MB (+4768kb) [00:17:33]
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: run 35 us 
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 46 MB. Current time: 10/8/18 2:31:49 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 45 MB. Current time: 10/8/18 2:31:50 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 48 MB. Current time: 10/8/18 2:31:53 PM IST
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 395, 260); // n (o, cj)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 48 MB. Current time: 10/8/18 2:31:55 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 91 MB (+1489kb) [00:19:10]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 47 MB. Current time: 10/8/18 2:33:23 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 48 MB. Current time: 10/8/18 2:37:43 PM IST
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 47 MB. Current time: 10/8/18 2:37:45 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 47 MB. Current time: 10/8/18 2:37:45 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 46 MB. Current time: 10/8/18 2:37:47 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 47 MB. Current time: 10/8/18 2:37:47 PM IST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// [GUI Memory]: 96 MB (+718kb) [00:38:29]
+// Elapsed time: 1735 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 4); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Cache_tb(Behavioral) (Cache_tb.vhd)]", 5, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Cache_tb(Behavioral) (Cache_tb.vhd)]", 5, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Cache_tb(Behavioral) (Cache_tb.vhd)]", 5, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+// Elapsed time: 226 seconds
+selectCodeEditor("Cache_tb.vhd", 310, 206); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 597 MB. GUI used memory: 46 MB. Current time: 10/8/18 3:07:48 PM IST

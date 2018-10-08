@@ -92,14 +92,14 @@ BEGIN
     -- read address 4 to cache set 0 - should be miss
     rw <= '0';
     address <= "00100";
-    lock <= "0000";
+    lock <= "0001";
     
     wait for 2*clk_period;
     
     -- read address 5 to cache set 1 - should be miss
     rw <= '0';
     address <= "00101";
-    lock <= "0000";
+    lock <= "0001";
     
     wait for 2*clk_period;
     
@@ -127,7 +127,7 @@ BEGIN
      -- read address 9 without locked - should be miss, cache changes
     rw <= '0';
     address <= "01001";
-    lock <= "0001";
+    lock <= "0011";
     
     wait for 2*clk_period;
     

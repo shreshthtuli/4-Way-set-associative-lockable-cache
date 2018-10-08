@@ -31,7 +31,7 @@ end Cache;
 
 architecture Behavioral of Cache is
 type pair is array(1 downto 0) of STD_LOGIC_VECTOR(31 DOWNTO 0);
-type set is array(1 downto 0) of pair;
+type set is array(3 downto 0) of pair;
 type cache is array(3 downto 0) of set;
 signal cache_memory : cache; -- [set number][index][1 if tag, 0 if data]
 
@@ -57,28 +57,36 @@ BEGIN
     if(clk = '1' and clk'event) then
         if(rw = '0') then -- read
             enable <= '0';
-            if(cache_memory(set_num)(0)(1)(2 downto 0) = tag) then -- hit with match to block 1
+            if(cache_memory(set_num)(0)(1)(2 downto 0) = tag) then -- hit with match to way 1
                 hit <= '1';
                 read_data <= cache_memory(set_num)(0)(0);
-            elsif(cache_memory(set_num)(1)(1)(2 downto 0) = tag) then -- hit with match to block 2
+            elsif(cache_memory(set_num)(1)(1)(2 downto 0) = tag) then -- hit with match to way 2
                 hit <= '1';
                 read_data <= cache_memory(set_num)(1)(0);
-            elsif(lock(set_num) = '1') then  -- miss with lock
+            elsif(cache_memory(set_num)(2)(1)(2 downto 0) = tag) then -- hit with match to way 3
+                hit <= '1';
+                read_data <= cache_memory(set_num)(2)(0);
+            elsif(cache_memory(set_num)(3)(1)(2 downto 0) = tag) then -- hit with match to way 4
+                hit <= '1';
+                read_data <= cache_memory(set_num)(3)(0);
+            else
                 hit <= '0';
                 mem_rw <= '0';
                 delay <= '1';                
-            elsif(lock(set_num) = '0') then -- miss with no lock
-                hit <= '0';
-                mem_rw <= '0';                
-                delay <= '1';  
             end if;
         elsif(rw = '1') then -- write
-            if(cache_memory(set_num)(0)(1)(2 downto 0) = tag) then -- hit with match to block 1
+            if(cache_memory(set_num)(0)(1)(2 downto 0) = tag) then -- hit with match to way 1
                 hit <= '1';
                 cache_memory(set_num)(0)(0) <= write_data;
-            elsif(cache_memory(set_num)(1)(1)(2 downto 0) = tag) then -- hit with match to block 2
+            elsif(cache_memory(set_num)(1)(1)(2 downto 0) = tag) then -- hit with match to way 2
                 hit <= '1';
                 cache_memory(set_num)(1)(0) <= write_data;
+            elsif(cache_memory(set_num)(2)(1)(2 downto 0) = tag) then -- hit with match to way 3
+                hit <= '1';
+                cache_memory(set_num)(2)(0) <= write_data;
+            elsif(cache_memory(set_num)(3)(1)(2 downto 0) = tag) then -- hit with match to way 4
+                hit <= '1';
+                cache_memory(set_num)(3)(0) <= write_data;
             else  -- miss
                 hit <= '0';
             end if;
@@ -91,14 +99,15 @@ BEGIN
         
         if(delay = '1') then
             read_data <= mem_read_data;
-            if(lock(set_num) = '0') then
-                -- update cache with LRU policy
-                cache_memory(set_num)(1)(0) <= cache_memory(set_num)(0)(0); -- copy block 1 to block 2
-                cache_memory(set_num)(1)(1) <= cache_memory(set_num)(0)(1);
-                cache_memory(set_num)(0)(0) <= mem_read_data; -- update block 1
-                cache_memory(set_num)(0)(1)(2 downto 0) <= tag;
-                cache_memory(set_num)(0)(1)(31 downto 3) <= "00000000000000000000000000000";
-            end if;
+            for k in 0 to 3 loop
+                if(lock(k) = '0') then
+                    -- update cache with first found
+                    cache_memory(set_num)(k)(0) <= mem_read_data; -- update block 1
+                    cache_memory(set_num)(k)(1)(2 downto 0) <= tag;
+                    cache_memory(set_num)(k)(1)(31 downto 3) <= "00000000000000000000000000000";
+                    exit;
+                end if;
+            end loop;
             delay <= '0';
         end if;
     end if;

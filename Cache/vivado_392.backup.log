@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Oct  7 18:58:45 2018
+# Process ID: 392
+# Current directory: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11836 C:\Users\Shreshth Tuli\Google Drive\Third Year\First Sem\COL719\COL719_Assignments\A2\4-Way-set-associative-lockable-cache\Cache\Cache.xpr
+# Log file: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/vivado.log
+# Journal file: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache'
+INFO: [Project 1-313] Project file moved from 'C:/Users/user/Desktop/4-Way-set-associative-lockable-cache/Cache' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 761.953 ; gain = 48.496
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct  7 18:59:28 2018...

@@ -2,17 +2,13 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Mon Oct  8 14:13:45 2018
-# Process ID: 2952
+# Start of session at: Sun Oct  7 18:58:45 2018
+# Process ID: 392
 # Current directory: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12604 C:\Users\Shreshth Tuli\Google Drive\Third Year\First Sem\COL719\COL719_Assignments\A2\4-Way-set-associative-lockable-cache\Cache\Cache.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11836 C:\Users\Shreshth Tuli\Google Drive\Third Year\First Sem\COL719\COL719_Assignments\A2\4-Way-set-associative-lockable-cache\Cache\Cache.xpr
 # Log file: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/vivado.log
 # Journal file: C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache.xpr}
 update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config {C:/Users/Shreshth Tuli/Google Drive/Third Year/First Sem/COL719/COL719_Assignments/A2/4-Way-set-associative-lockable-cache/Cache/Cache_tb_behav.wcfg}
-source Cache_tb.tcl
-run 35 us
